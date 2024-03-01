@@ -1,4 +1,4 @@
-\documentclass[OPS,authoryear,toc]{lsstdoc}
+\documentclass[OPS,authoryear,toc,lsstdraft]{lsstdoc}
 \input{meta}
 
 % Package imports go here.
@@ -15,7 +15,7 @@
 % \setDocSubtitle{A subtitle}
 
 \author{%
-Leanne Guy
+Colin Slater, Leanne Guy
 }
 
 \setDocRef{RTN-052}
@@ -28,7 +28,8 @@ Leanne Guy
 
 \setDocAbstract{%
 This document provides the charge to the Rubin Observatory Legacy Survey of Space
-and Time (LSST) Data Release Board (DRB), a Rubin Operations internal group responsible for the assessment of Rubin Observatory's schedule to make annual data releases and current validation of nightly data products. 
+and Time (LSST) Data Release Board (DRB), a Rubin Operations internal group responsible for the
+assessment of Rubin Observatory's schedule to make annual data releases.
 }
 
 % Change history defined here.
@@ -36,7 +37,7 @@ and Time (LSST) Data Release Board (DRB), a Rubin Operations internal group resp
 % Fields: VERSION, DATE, DESCRIPTION, OWNER NAME.
 % See LPM-51 for version number policy.
 \setDocChangeRecord{%
-  \addtohist{1}{YYYY-MM-DD}{Unreleased.}{Leanne Guy}
+  \addtohist{1}{2024-03-01}{Initial Draft}{Colin Slater}
 }
 
 
@@ -50,6 +51,63 @@ and Time (LSST) Data Release Board (DRB), a Rubin Operations internal group resp
 % ADD CONTENT HERE
 % You can also use the \input command to include several content files.
 
+
+\section{Rationale}
+
+Production of the data release is a process that spans many months and requires a large investment
+of time, staff effort, and compute resources. These factors necessitate a policy-level system to
+ensure that the results of a DRP processing will maximize the scientific return from the data by
+determining an appropriate scope of inputs, software components and versions, and output products
+that will meet the needs of the science users.
+
+This optimization is made challenging by the time required to produce a data release, which can make
+it impractical to redo significant amounts of the processing if problems are discovered late in the
+process. Therefore it is important that most decision-making take place at the start of the release
+process, since the ability to make changes later during the release process is significantly
+constrained. In the highly-constrained environment near the target release date, decisions regarding
+the release contents and the release schedule may have significant impact on both the science users
+and the observatory operational teams. The purpose of the DRB is to provide a mechanism for weighing
+these wide-ranging tradeoffs and deciding how the release should proceed.
+
+\section{Charge}
+
+The DRB is responsible for setting the scope, schedule, and resources available for the data release
+production. The DRB is expected to delegate daily management responsibility to a campaign committee,
+but retains the overall authority and responsibility for the release.
+
+\section{Composition}
+
+The DRB is chaired by the Head of Science, and includes associate directors of all departments.
+
+\section{Activities}
+
+The DRB meets at the start of the DRP process to decide on the input dataset, the initial pipelines
+version for precursor run testing, and the proposed schedule for processing and release. After an
+initial precursor processing is performed on a small subset of the data, a period of validation
+begins, and ends with proposals from the Verification and Validation team and Science Pipelines to
+either begin the full processing or make further changes to the plan. The DRB is responsible for
+approving the start of the full processing.
+
+Once the production has begun, the process can continue according to the plan without further
+intervention by the DRB. Day-to-day operational management is conducted by a campaign committee,
+with representation from the technical teams involved in the production. This campaign committee
+meets frequently to carry out the campaign as planned by the DRB.
+
+However, if issues arise during production that potentially impact the scope, schedule, or resource
+usage of the campaign, the campaign committee alerts the DRB, and the DRB decides on a best course
+of action. For example, this could be due to particular algorithms or table columns that are found
+to contain degraded results, unexpected delays in processing, or additional steps that are necessary
+to enable scientific use. Minor versions of these problems are expected and can often be resolved by
+the production teams and the campaign committee, but the DRB's input is critical when problems are
+significant enough that a schedule delay or additional compute resources would be required, or
+alternatively, the release of data with known caveats.
+
+These mitigation activities can be time critical, and the DRB must be available to choose between
+possible mitigations on short timescales. Delays in decision making can rapidly use up schedule
+margin and cause a day-for-day delay in the release.
+
+
+
 \appendix
 % Include all the relevant bib files.
 % https://lsst-texmf.lsst.io/lsstdoc.html#bibliographies
@@ -62,7 +120,6 @@ and Time (LSST) Data Release Board (DRB), a Rubin Operations internal group resp
 \input{acronyms.tex}
 % If you want glossary uncomment below -- comment out the two lines above
 %\printglossaries
-
 
 
 
